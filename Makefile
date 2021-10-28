@@ -17,6 +17,7 @@ install:
 .PHONY: rm-containers
 rm-containers:
 	docker-compose -f docker-compose.yml rm -f
+	docker volume rm wcadb_docker
 
 .PHONY: rm
 rm: stop rm-containers
